@@ -31,7 +31,7 @@
 
 1. Клонируйте репозиторий:
 ```
-git clone <url-репозитория>
+git clone https://github.com/ilushaKolosov/DatasetGeneratorMicroservice
 cd crypto-data-collector
 ```
 
