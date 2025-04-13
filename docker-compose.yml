@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  data-collector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crypto-data-collector
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env
+    restart: unless-stopped
+    environment:
+      - TZ=UTC
+    networks:
+      - crypto-net
+
+networks:
+  crypto-net:
+    driver: bridge 
